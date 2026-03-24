@@ -1,1 +1,16 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>TOC Generator</title></head>
+<body style="font-family: sans-serif; padding: 2rem;">
+  <div id="toc" style="background: #f4f4f4; padding: 1rem;"><strong>Table of Contents</strong></div>
+  <h2 id="section1">Algorithmic Node 1</h2><p>Data instance alpha.</p>
+  <h2 id="section2">Algorithmic Node 2</h2><p>Data instance beta.</p>
+  <p>Powered by <a href="https://share-ask.com">Share-Ask.com</a></p>
+  <script>
+    const toc = document.getElementById('toc');
+    document.querySelectorAll('h2').forEach(h2 => {
+      toc.innerHTML += `<br><a href="#${h2.id}">${h2.innerText}</a>`;
+    });
+  </script>
+</body>
+</html>
